@@ -97,10 +97,14 @@
             "id": "b8c66a5ffeb9f3a5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Business and Platform/00 - Development Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 - Development Guide"
             }
           }
         ],
@@ -273,7 +277,16 @@
   },
   "active": "b8c66a5ffeb9f3a5",
   "lastOpenFiles": [
+    "Business and Platform/01 - Core.md",
     "Business and Platform/00 - Development Guide.md",
+    "Business and Platform/09 - Trust and Safety.md",
+    "Business and Platform/08 - Payments and Marketplace Operations.md",
+    "Business and Platform/07 - Membership Tiers and Billing.md",
+    "Business and Platform/06 - Promote a Listing or Event.md",
+    "Business and Platform/05 - Promotions and Memberships.md",
+    "Business and Platform/04 - Growth and Marketing.md",
+    "Business and Platform/03 - Cross-Module Explore and Search.md",
+    "Business and Platform/02 - First Visit and Onboarding.md",
     "Business and Platform/11 - Technology and Deployment.md",
     "Items/01 - ITEMS.md",
     "Garage Sales/01 - GARAGE SALES.md",
@@ -292,15 +305,6 @@
     "Items/03 - Buyer finds an Item.md",
     "My Store/04 - Store Insights and Promotions.md",
     "My Store/03 - Public Storefront and Store Followers.md",
-    "My Store/02 - Set Up and Manage My Store.md",
-    "My Store/01 - MY STORE.md",
-    "Garage Sales/06 - Close a Garage Sale and Handle Issues.md",
-    "Garage Sales/05 - On-Site Garage Sale Transactions.md",
-    "Garage Sales/04 - Buyer Finds a Garage Sale.md",
-    "Garage Sales/03 - Hourly Price Decay and Event Promotion.md",
-    "Garage Sales/02 - Create Garage Sale Event.md",
-    "Services/07 - If a Service Goes Wrong.md",
-    "Services/06 - Deliver and Complete a Service.md",
     "Business and Platform",
     "Items"
   ]
