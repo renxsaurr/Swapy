@@ -18,16 +18,14 @@ Help both users agree on the exact items, cash, and handover preferences before 
 3. SWAPY creates a chat without an offer.
 4. Either user can start an offer from the chat.
 
-A normal message is not an offer and does not reserve the item. Every chat remains linked to its exact originating listing and relevant listing version.
-
-SWAPY cannot prevent users from taking a conversation or deal off-platform. Explain that off-platform terms, payment, or handover are not recorded by SWAPY and do not receive its in-app transaction protections.
+A normal message is not an offer and does not reserve the item.
 
 ## Offer form
 Show only formats accepted by the seller:
 
 - **Cash:** enter the amount
-- **An item:** select an available canonical item from My Store or add a one-off item with the same required-field, prohibited-item, image-safety, and moderation checks used for published listings.
-- **An item + cash:** select or add a validated item, enter the cash amount, and show who pays.
+- **An item:** select an item from My Store or add a one-off item with a photo, title, and condition
+- **An item + cash:** select or add an item, enter the cash amount, and show who pays
 
 Allow an optional message. Before sending, show a review:
 
@@ -76,20 +74,14 @@ SWAPY does not verify item values or show a “fairness” score. Users decide w
 - Counteroffer received
 - Accepted — ready for contract
 - Declined
-- Withdrawn
-- Expired
 
-Each buyer may have only one current open offer per listing. An offer and each counteroffer expire seven calendar days after it was sent; show the exact expiry time in the ledger. Buyers may withdraw an open offer. Withdrawn and expired offers remain in history but cannot be accepted; create a new offer to continue.
-
-Messaging or accepting an offer does not reserve the item. The first contract signature starts a 72-hour signing lock, not a reservation. The second signature must atomically check and reserve every item. See [[05 - Both Sign the Swap Contract|Both Sign the Swap Contract]].
+Messaging or accepting an offer does not reserve the item. Reservation happens after the agreed terms are signed in the Swap Contract.
 
 ## Safety
 - Provide block and report actions in chat.
 - Keep offer versions and changes visible.
 - Notify users when an offer or counteroffer arrives.
 - Clearly mark which offer is current.
-- Apply configurable per-account and risk-based message/offer rate limits. When a limit is reached, show a clear cooldown and a way to report an error.
-- Never silently drop messages or offers; show sent, failed, or retrying state, preserve drafts, and offer explicit retry.
 
 ## Justification
 A structured offer keeps the important terms visible before the conversation gets long. The ledger shows who gives and receives each item and who pays any cash difference.

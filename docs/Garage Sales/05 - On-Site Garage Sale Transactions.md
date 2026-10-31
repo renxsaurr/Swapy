@@ -9,7 +9,7 @@ Make event purchases and trades quick while recording which item changed hands.
 3. If swapping, show a compact offer form and confirm exact item and cash direction.
 4. Both parties inspect the item and review terms.
 5. Each taps **Confirm handover**.
-6. Create the recorded transaction and update canonical item availability from its status. Do not let a host manually mark an item sold/traded. A disputed handover stays open for support rather than completing from one participant’s confirmation alone.
+6. Mark the event item sold/traded and update the host inventory.
 
 A host may offer a short reservation, recommended default 10 minutes. Show when it expires and whether it holds the current listed price.
 

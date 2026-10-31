@@ -16,7 +16,7 @@ Collect:
 Host may choose whether the exact address is public or shared with confirmed attendees. Do not show a private address without the host’s choice.
 
 ## Inventory
-Each event item links to the owner’s canonical item record. Do not create a duplicate item or place it in another active listing at the same time. Run the same required-field, prohibited-item, image-safety, and moderation checks as item listings and one-off offer items. A completed event sale or trade changes availability only through the recorded transaction; no manual sold/traded toggle.
+Each event item uses a concise item card and its own condition/offer details. A completed event sale or trade marks the item unavailable.
 
 ## UI Flow
 Event details → add items → privacy and attendance settings → preview → publish.

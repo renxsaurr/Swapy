@@ -1,44 +1,72 @@
 # Launch Plan and Success Metrics
 
-Release a small, complete marketplace first. Add more transaction types only after their user flow and support process are ready.
+## Purpose
+Sequence SWAPY’s rollout and measure whether the marketplace is useful, trusted, and sustainable.
 
-## Suggested order
+## Suggested Rollout
+1. Pilot Items, My Store, core chat, and transaction/support flow in one local market.
+2. Add Garage Sale events and measure attendance and repeat use.
+3. Add Services after service scope, cancellation, and payment policies are ready.
+4. Add Home Swaps after identity, agreement, address privacy, check-in/out, and incident support are ready.
 
-1. Pilot Items, My Store, messaging, offers, and support in one approved local market.
-2. Add Garage Sales after event setup, inventory, on-site handover, and issue handling work end to end.
-3. Add Services after scope, schedule, cancellation, payment or trade, and completion rules are ready.
-4. Add Homes one transaction type at a time after its location rules, privacy, agreements, and support are ready.
+All modules remain in the product plan. Release a module only when its full user journey and operating support are ready.
 
-This is a suggested order. The client must approve the first release scope and market.
+## Launch Readiness Gate
+Before public launch, confirm:
 
-## Before a transaction type goes live
+### Product and Client Decisions
+- Written approval of the launch scope and supported user journeys.
+- Agreed listing, pricing, promotion, cancellation, refund, and support policies.
+- Clear exclusions, including what is not supported in the first release.
+- Acceptance criteria for each launch flow.
 
-- Test the full flow from discovery through completion or support.
-- Approve the rules for that type in the launch location.
-- Confirm the agreement, payment, cancellation, refund, and dispute steps.
-- Make sure members can report a problem and reach support.
-- Check that private addresses, messages, and documents are protected.
-- Set up error alerts, backups, a restore process, and a rollback plan.
-- Agree on support ownership, hours, and response expectations.
-- Load-test the expected busy periods and confirm hosting cost.
+### Operations and Compliance
+- Payment provider has reviewed/approved the intended marketplace model.
+- User terms, privacy notices, prohibited-item rules, and dispute policies are reviewed for the U.S. launch.
+- Home-swap insurance, access, and incident processes are ready before enabling home stays.
+- Support ownership, response hours, escalation, and refund handling are defined.
 
-If a location or transaction type is not approved, do not allow users to make binding offers, bookings, agreements, or payments for it.
+### Product and Technical Readiness
+- Signup, listing, discovery, offer, contract, payment, handover, inspection, review, and dispute paths work end to end for each enabled module.
+- Permissions protect private profiles, addresses, messages, transactions, and uploaded files.
+- Error reporting, service monitoring, cost alerts, backups, and restore procedures are in place.
+- Load testing uses an agreed peak traffic estimate and realistic marketplace actions.
+- Rollback and incident communication procedures are documented.
+- Production and staging data/accounts are separate.
 
-## Controlled release
+### Controlled Release
+- Run a closed pilot in one geographic market with invited users.
+- Monitor failures, support load, abandoned offers, disputes, and performance.
+- Fix launch-blocking issues before widening access.
+- Increase traffic gradually and pause promotion if service or support quality degrades.
 
-Start with invited members in one market. Watch failed transactions, incomplete offers, cancellations, reports, support cases, response time, and service errors. Fix serious problems before inviting more people. Pause promotion if support or service quality drops.
+## Scope and Change Control
+New client requests enter a prioritized backlog. For each request, record:
+- User problem and business goal
+- Module and workflow affected
+- Priority: launch blocker, launch requirement, or post-launch
+- Cost, time, legal/operational dependency, and impact on existing flows
+- Acceptance criteria and decision owner
 
-## Measures to review
+Do not silently add new requests to the launch release. Re-estimate schedule and scope when a request changes the approved plan.
 
-- Listings created and completed by type
-- Search results opened and listings saved
-- Offers or requests that become agreements
-- Agreements that reach handover or completion
-- Repeat use, reports, cancellations, disputes, and support wait time
-- Payment failures and refunds, where payments are supported
+## Marketplace Metrics
+- New and complete listings by module
+- Search-to-detail and detail-to-save rates
+- Offer/request-to-agreement conversion
+- Signed-to-handover or delivery completion
+- Repeat active users and followed stores
+- Garage Sale follows, attendance, and sell-through
+- Service request completion
+- Home swap agreement completion and issue rates
 
-Growth and revenue measures matter later, but they must be reviewed alongside safety, disputes, and support workload.
+## Trust and Revenue Guardrails
+Track ghosting, misrepresentation, cancellations, dispute rate, response time, refund loss, reports, paid conversion, promotion incrementality, and subscription churn. Review safety outcomes alongside growth.
 
-## Managing new requests
+## Decision Rule
+A campaign or feature should improve successful transactions or meaningful retention without creating unacceptable increases in disputes, spam, safety incidents, or support backlog.
 
-For each new request, record the problem it solves, affected flow, priority, cost, dependencies, and how completion will be judged. Revisit the launch scope when a request adds work. Do not quietly add it to a release plan.
+## Justification
+A phased rollout focuses operational learning in one market before adding more complex fulfillment. A written launch gate defines “ready” as all agreed launch journeys and support processes being ready. Change control keeps shifting client requests visible so the team can make deliberate tradeoffs instead of shipping an incomplete system.
+
+Parent: [[SWAPY]]

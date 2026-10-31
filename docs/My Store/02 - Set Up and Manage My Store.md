@@ -15,7 +15,7 @@ Provide sections for:
 - Completed and archived listings
 - Basic views, saves, and offers
 
-Actions: create, edit, pause, archive an available item, share store, and manage visibility. Show Reserved and Sold/Traded as transaction-derived states; do not provide a manual sold/traded action. The storefront and Garage Sale inventory link to the same canonical item, rather than creating duplicate items.
+Actions: create, edit, pause, archive, mark sold/traded, share store, and manage visibility.
 
 ## Store State
 - Public

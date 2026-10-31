@@ -24,7 +24,7 @@ Buttons:
 - **Change payment method**
 - **Get help**
 
-Do not charge users when they send an offer. The payment step begins after both signatures and successful atomic reservation of all items. Payment is due within 48 hours after the second signature. One 24-hour grace period may be granted for a documented issue. If still unpaid, cancel and release every reservation unless an unresolved case requires support review.
+Do not charge users when they send an offer. The payment step begins after contract signing.
 
 ## Payment Statuses
 - Not required
@@ -36,7 +36,7 @@ Do not charge users when they send an offer. The payment step begins after both 
 - Refunded
 - Payment disputed
 
-If a payment fails, show a clear retry action and keep the transaction in **Payment needed**. Show the 48-hour deadline, whether the single grace period has been used, and expiry consequences. Notify both users before cancellation. Keep unresolved cases open for support review.
+If a payment fails, show a clear retry action and keep the transaction in **Payment needed**. Set a payment deadline based on the payment method. If it expires, notify both users, cancel the transaction, and release the item reservation under the stated cancellation rules.
 
 ## Offline Cash
 For a local meetup, users may agree to exchange cash outside SWAPY. Show a confirmation of the amount and ask both users to confirm it was exchanged.
@@ -44,14 +44,11 @@ For a local meetup, users may agree to exchange cash outside SWAPY. Show a confi
 Explain that SWAPY records their confirmation but cannot guarantee or reverse offline cash.
 
 ## Payment Provider Rule
-Keep payments behind a provider integration layer. Do not choose a global provider until launch markets and transaction types are known. Before implementation, confirm the exact charge, split, payout timing, refund, dispute, and claim flow with the provider.
-
-Keep seller payout on hold until buyer acceptance or the inspection deadline only where the approved provider supports that flow. If SWAPY cannot support the required payout/hold flow for an online transaction type, disable online checkout for that type. Do not imply protection SWAPY cannot provide and do not call any flow “escrow” unless that arrangement is actually approved.
-
-Physical returns and cash refunds are separate actions. Record evidence and reconciliation for the provider-supported refund or reversal process; do not promise that an item or funds can always be recovered.
+Use a payment provider and marketplace flow approved for SWAPY’s business and launch market. Do not call the feature “escrow” unless SWAPY has an approved escrow arrangement. Stripe lists escrow services among restricted businesses. Refunds and transfers also need a defined reconciliation process; a refund does not automatically reverse every related transfer.
 
 References:
-- [[08 - Payments and Marketplace Operations|Payments and Marketplace Operations]]
+- [Stripe restricted businesses](https://stripe.com/legal/restricted-businesses)
+- [Stripe Connect separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)
 
 ## Justification
 Showing the payer, amount, and purpose before payment reduces confusion, especially in hybrid trades. Starting payment after signature means the cash amount comes from agreed terms rather than an unfinished offer. Clear payment statuses help users understand whether they need to act.
