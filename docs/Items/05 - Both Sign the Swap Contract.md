@@ -21,13 +21,16 @@ Show a separate checkbox or confirmation that each user has reviewed the terms.
 
 ## Signing Flow
 1. First user reviews the contract and taps **Sign contract**.
-2. Show their status as **Waiting for the other user**.
-3. Second user receives a notification and reviews the same version.
-4. Second user taps **Sign contract**.
-5. Once both have signed, mark the transaction **Contract signed** and reserve the item for this transaction.
-6. Continue to the payment step if the transaction has a cash component.
+2. Create a 72-hour signing lock for this contract version and show **Waiting for the other user**. This is not an inventory reservation; the item can still become unavailable through another completed contract.
+3. The second user receives a notification, reviews the same immutable version, and signs before the lock expires.
+4. At the second signature, atomically check availability and reserve every canonical item in the agreement as one operation.
+5. If every item is available, record both signatures and all reservations together, then show **Contract signed — items reserved**.
+6. If any item is unavailable or the atomic reservation fails, mark **Not completed — item unavailable**, explain the conflict, and create no reservations.
+7. Continue to payment if the transaction has a cash component.
 
-If either user wants to change terms, they return to chat, update the offer, and create a new contract version. Both users must sign the new version.
+If the second signature does not arrive within 72 hours, mark the contract version **Expired** and end the signing lock. The lock did not reserve inventory.
+
+If either user wants to change terms, they return to chat, update the offer, and create a new contract version. Both users must sign the new version. Material listing changes—price, photos, condition, defects, accessories, or accepted deal types—must be highlighted and receive renewed consent. Never silently amend signed terms.
 
 ## UI States
 - Ready to review
@@ -36,9 +39,19 @@ If either user wants to change terms, they return to chat, update the offer, and
 - Contract signed
 - Changes requested
 - Contract cancelled
+- Signing lock expired
+- Not completed — item unavailable
+
+## Deadlines, Cancellation, and Reservation Release
+- Before both signatures, a participant may withdraw. End the signing lock; no item reservation exists.
+- After signing, any cash payment is due within 48 hours of the second signature. A transaction has one 24-hour grace period total for a documented issue; it is not a fresh extension for each deadline. If unpaid after the payment deadline and grace, cancel and release every reservation together unless an unresolved dispute requires support review.
+- A post-signature cancellation follows the disclosed cancellation rules and is recorded with requester, reason, timing, and payment state.
+- Keep documented issues, disputes, fraud reports, and evidence conflicts open for support review; do not automatically complete or release affected inventory while unresolved.
+- Release all reservations atomically. Do not release only part of a multi-item transaction unless support records an agreed, signed amendment.
+- Do not collect a bond in the current flow.
 
 ## Important Rule
-Accepting an offer in chat means the users are ready to formalize the terms. The transaction is not active and the item is not reserved until both users sign.
+Accepting an offer in chat means users are ready to formalize terms. The first signature creates only a 72-hour signing lock. The second signature atomically validates and reserves every item, or rejects the contract without partial reservation.
 
 ## Justification
 A single read-only summary helps users catch mistakes before committing. Separate signatures make it clear that both users reviewed the same terms. Versioning prevents an old or edited offer from being mistaken for the final agreement.

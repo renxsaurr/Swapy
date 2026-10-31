@@ -1,7 +1,7 @@
 # Home Swap Check-In and Checkout
 
 ## Purpose
-Guide guests and hosts through arrival and departure while recording useful milestones.
+Guide short-stay/home-swap guests and hosts through arrival and departure while recording useful milestones. Long-term rental milestones are defined by the location profile; property sale and ownership-transfer milestones are not occupancy check-in/check-out.
 
 ## Before Arrival
 - Show confirmed dates, guest count, house rules, and support contact.

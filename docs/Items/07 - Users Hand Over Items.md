@@ -7,20 +7,22 @@ Help both users complete the physical exchange and record what happened.
 The signed contract records whether the items will be shipped or exchanged at a local meetup. Users cannot change the method after signing unless both agree to an amendment.
 
 ## Shipping Flow
-1. Each sender sees the item they need to send and the shipping deadline.
-2. Sender packages the item and uses tracked shipping.
-3. Sender adds the tracking number or uses a SWAPY-provided label where available.
-4. The transaction timeline shows each shipment’s status.
-5. Recipient is notified when the shipment is marked delivered.
+1. Each sender sees the item, agreed dispatch window, and tracking requirement.
+2. Before sealing, sender captures dated photos of item condition and packaging, including item in the package and the sealed parcel. Evidence stays private to the transaction and support.
+3. Sender ships with a trackable carrier and adds tracking during the agreed dispatch window. A SWAPY label may be offered where available.
+4. For two-way shipping, both users must provide tracking for their item during the agreed dispatch window. A documented issue may use the transaction’s single permitted 24-hour grace period; unresolved cases go to support.
+5. A manual “delivered” claim is not verified delivery. Inspection starts only after carrier-confirmed delivery or support-verified carrier evidence.
+6. Track delivery and inspection separately for every item leg.
 
 For a two-way swap, both users should ship within the agreed shipping window. A suggested default is 3 business days after the contract and payment steps are complete.
 
 ## Local Meetup Flow
 1. The contract shows the agreed public meetup place and time.
-2. Both users open the transaction and confirm arrival.
+2. Each participant separately confirms arrival and handover in the transaction.
 3. Users inspect and exchange the items.
-4. Each user taps **Confirm handover**.
-5. If cash is exchanged offline, each user confirms the amount was paid.
+4. Each participant confirms the specific item they gave and received. One participant’s confirmation alone cannot complete a disputed handover.
+5. If a participant reports a problem or confirmations conflict, keep the handover under review and open support handling.
+6. If cash is offline, each user separately confirms the amount was paid. SWAPY records their claims but cannot independently verify or reverse it.
 
 A one-time transaction QR code may be used to open the correct handover screen. Scanning it records the transaction step; it does not prove the item’s condition or guarantee personal safety.
 
@@ -28,10 +30,13 @@ A one-time transaction QR code may be used to open the correct handover screen. 
 - Ready to ship
 - Shipped
 - In transit
-- Delivered
+- Carrier delivery reported
+- Carrier-confirmed delivery
+- Support-verified delivery
 - Meetup scheduled
 - Both arrived
-- Handover confirmed
+- Awaiting both confirmations
+- Handover mutually confirmed
 - Handover problem reported
 
 ## Justification

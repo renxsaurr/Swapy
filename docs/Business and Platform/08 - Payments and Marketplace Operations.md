@@ -12,18 +12,17 @@ Define how SWAPY records cash components and coordinates with payment providers 
 - Offline cash is acknowledged by users but is not guaranteed or reversible by SWAPY.
 
 ## Provider and Funds
-### Current Provider Decision (Provisional, Locked for Planning)
-- Preferred first provider to evaluate: **Stripe Connect** for online straight-sale payments and hybrid-swap cash differences.
-- A straight swap with no cash component does not need payment processing.
-- SWAPY will plan around one payment provider; no second provider is selected or planned at this stage.
-- This is a product-planning decision, not confirmation that Stripe has approved SWAPY. SWAPY must submit its actual business model, launch region, seller onboarding, payment, refund, and payout flows for Stripe review.
-- Do not promise escrow, payout release after inspection, or home damage-deposit protection unless Stripe explicitly approves that exact flow. If Stripe does not support a required flow, revisit the product scope and provider choice before implementation.
-
-Do not label a delayed payout “escrow” unless a regulated, approved escrow arrangement exists. Stripe lists escrow services among restricted businesses. A refund may not automatically reverse a related transfer, so operations must define how refunds, disputes, and failed reversals are funded and reconciled.
+### Provider Decision
+- No global payment provider is selected yet. Decide after SWAPY confirms launch markets and enabled transaction types.
+- Keep provider-specific charges, connected-account onboarding, payouts, refunds, and disputes behind a payment integration layer.
+- Before implementation, submit SWAPY’s exact flows to candidate providers: item sale, hybrid cash difference, long-term rental, property sale/closing, any home deposit, cancellation, inspection claim, payout hold, and refunds.
+- Do not promise payout release after inspection, deposits, or escrow unless the approved provider and applicable location profile support that exact flow.
+- If the required online protection cannot be supported, disable online checkout for the affected transaction type. Offline cash cannot be independently verified or reversed by SWAPY.
+- A refund may not automatically reverse a transfer. Define reconciliation, negative-balance handling, and evidence-based claim steps before launch.
 
 References:
-- [Stripe restricted businesses](https://stripe.com/legal/restricted-businesses)
-- [Stripe Connect separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)
+- [[14 - Global Location Rules|Global Location Rules]]
+- [[11 - Technology and Deployment|Technology and Deployment]]
 
 ## Payment Statuses
 Not required → Payment needed → Processing → Paid → Refund pending / Disputed → Refunded or Resolved.
@@ -34,6 +33,6 @@ On failure, show retry and a method-specific deadline. If it expires, notify bot
 Possible revenue sources are optional subscriptions, one-off promotions, and a disclosed transaction fee if provider and consumer terms permit it. Do not silently deduct a fee from the cash leg.
 
 ## Justification
-Starting with one preferred marketplace provider keeps the first payment experience understandable and avoids adding unnecessary payment integrations. Making approval conditional on SWAPY’s exact model prevents the product from promising funds custody or protection that a provider has not approved. The payment ledger must state who owes what and what SWAPY can actually do. Clear status and reconciliation rules prevent a cash component from becoming a promise of funds custody or guaranteed recovery.
+Keeping provider-specific behavior behind an integration layer lets SWAPY decide after launch markets and transaction types are known. Conditional provider approval prevents the product from promising funds custody or protection that has not been approved. The payment ledger must state who owes what and what SWAPY can actually do. Clear status and reconciliation rules prevent cash components from becoming a promise of funds custody or guaranteed recovery.
 
 Parent: [[SWAPY]]

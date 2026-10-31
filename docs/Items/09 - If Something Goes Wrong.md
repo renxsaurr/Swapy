@@ -28,23 +28,27 @@ Let the user describe the problem and add photos, tracking details, or other rel
 
 Pause unsettled payments or transfers where the approved payment flow allows it. Do not promise recovery of an item or money that SWAPY cannot control.
 
+Payment is due within 48 hours after the second signature, with one 24-hour grace period total for a documented issue across applicable transaction deadlines. Keep disputes and unresolved cases open for support review; do not automatically release reservations or close the transaction while they remain unresolved. No bond is collected in the current flow.
+
 ## Common Outcomes
 
-### Item not shipped
+### Item not shipped or tracking missing
 - Contact the sender and give them a response window.
-- Allow a short extension for a documented carrier or emergency issue.
+- Require tracking from both users during the agreed two-way dispatch window. Allow only the one 24-hour documented-issue grace period where applicable; send unresolved cases to support.
 - If unresolved, cancel under the stated terms and return recoverable funds through the payment provider’s approved process.
-- Apply any bond consequence only if the bond terms and payment arrangement allow it.
+- Do not infer delivery from a manual claim; require carrier-confirmed or support-verified evidence.
 
 ### Item is wrong, damaged, or materially misrepresented
-- Compare the received item with the signed contract and listing snapshot.
-- If supported by evidence, offer a return and refund or exchange-back under the stated policy.
+- Compare the item with the exact signed contract and listing snapshot, plus pre-shipment, packaging, tracking, and recipient evidence.
+- If supported by evidence, offer a tracked return and refund or exchange-back under the disclosed location-specific policy.
 - A partial cash adjustment requires both users’ agreement or a policy-supported decision.
 
 ### Hybrid refund
 - Address the physical item and the cash leg separately.
 - Prefer exchange-back or return-and-refund.
 - If cash has already settled, explain that refunding it may require a new payment or a provider-supported reversal.
+
+Do not pay out while a material claim is open unless the approved provider flow requires that outcome. If SWAPY cannot hold payout through acceptance or the inspection deadline, disable online checkout for the affected transaction type before signing.
 
 ## Case Statuses
 - Issue submitted

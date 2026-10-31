@@ -4,7 +4,7 @@
 Define what SWAPY is, how its modules fit together, and the rules that apply across the marketplace.
 
 ## Product Definition
-SWAPY is a peer-to-peer marketplace where people sell and trade items, arrange home swaps, offer services, and discover temporary local Garage Sales.
+SWAPY is a peer-to-peer marketplace where people sell and trade items, arrange short stays and home swaps, rent or sell property, trade property ownership, offer services, and discover temporary local Garage Sales.
 
 **Brand promise:** Turn what you have into what you want.
 
@@ -13,17 +13,22 @@ See [[02 - First Visit and Onboarding|First Visit and Onboarding]] and [[03 - Cr
 
 ## Modules
 - **Items:** physical goods offered for sale, swap, or item plus cash.
-- **Homes:** home swaps/stays for agreed dates. Launch scope excludes property sales and ordinary rentals.
+- **Homes:** short stays, long-term rentals, property sales, and trades of property ownership, each with a separate location-approved transaction flow.
 - **Services:** bookable services with defined deliverables, schedule, and terms; providers choose accepted payment/trade formats.
 - **Garage Sales:** time-bounded local events with their own item inventory and fast in-person handovers.
 - **My Store:** a person’s shareable storefront across their listings and events plus private management tools.
 
 ## Brand
 - Product name: **SWAPY**, matching the provided logo.
-- Primary color: **Orange #E87820**.
-- Secondary color: teal from the provided logo; confirm exact value from the original logo asset if available.
+- The logo reference previously provided uses orange **#E87820**; preserve it as the supplied logo color reference.
 - Personality: neighborly, practical, optimistic, and trustworthy.
 - Tone: clear and friendly. Never imply guaranteed safety, appraisal, or sale.
+
+## Suggested Web Color Tokens
+- Brand orange: **#FF5A00** (suggested web-app token; confirm against the logo and client brand approval before final UI implementation).
+- Brand teal: **#00B8A9**.
+- Page background: **#FFFFFF**.
+- Treat these as suggested semantic tokens and check contrast for text, controls, and focus states before implementation.
 
 ## Shared Product Rules
 1. A listing type determines its transaction flow; offer formats are not the same as modules.
@@ -34,13 +39,15 @@ See [[02 - First Visit and Onboarding|First Visit and Onboarding]] and [[03 - Cr
 6. Report, block, and support tools are available to all users.
 7. Sponsored placement is labeled and cannot bypass safety checks or user filters.
 8. Payment, deposit, and refund claims must match the approved provider flow and local rules.
+9. Every module and binding transaction type is subject to its Enabled location profile; see [[14 - Global Location Rules|Global Location Rules]].
+10. Platform-wide administration is role-limited and auditable; see [[15 - Platform Administration|Platform Administration]].
 
 ## Shared Transaction Pattern
 Discover → inspect details → make request/offer → negotiate structured terms → confirm/sign → pay if applicable → hand over/deliver → inspect/confirm → close or resolve a claim → review.
 
 ## Decisions Still Requiring Validation
-- Exact launch country, currencies, consumer terms, tax obligations, and provider eligibility.
-- Home-swap insurance, deposits, and any permitted cost-sharing.
+- Exact launch country, currencies, consumer terms, tax obligations, provider eligibility, and enabled module/transaction types in each market profile.
+- Applicable identity, authority, registration, disclosure, licence, permit, payment, cancellation, and dispute rules for each supported market/type.
 - Final membership prices, listing caps, and promotion credit amounts.
 - Provider-approved processing and payout timing for cash components.
 
