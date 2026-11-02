@@ -97,10 +97,14 @@
             "id": "b8c66a5ffeb9f3a5",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Business and Platform/00 - Development Guide.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 - Development Guide"
             }
           }
         ],
