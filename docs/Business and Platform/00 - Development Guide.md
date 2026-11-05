@@ -67,20 +67,20 @@ Keep these parts as modules in one backend at first:
 
 `Accounts · Items · Homes · Services · Garage Sales · My Store · Search · Messaging · Transactions · Payments · Support · Administration`
 
-|#|Module|What it handles|
-|---|---|---|
-|1|**Accounts**|Sign up, sign in, user profiles, and account settings|
-|2|**Items**|Creating, editing, browsing, and managing item listings|
-|3|**Homes**|Home listings and their related rental or property workflows|
-|4|**Services**|Service listings and managing service offers|
-|5|**Garage Sales**|Creating and managing garage sale listings or events|
-|6|**My Store**|A member’s space for managing their own listings|
-|7|**Search**|Searching, filtering, and finding listings by category or location|
-|8|**Messaging**|Conversations between members|
-|9|**Transactions**|Tracking the progress and status of a deal between members|
-|10|**Payments**|Handling payment-related steps; the payment provider still needs to be decided|
-|11|**Support**|Help requests and member support|
-|12|**Administration**|Admin tools for managing the platform and its content
+| #   | Module             | What it handles                                                                |
+| --- | ------------------ | ------------------------------------------------------------------------------ |
+| 1   | **Accounts**       | Sign up, sign in, user profiles, and account settings                          |
+| 2   | **Items**          | Creating, editing, browsing, and managing item listings                        |
+| 3   | **Homes**          | Home listings and their related rental or property workflows                   |
+| 4   | **Services**       | Service listings and managing service offers                                   |
+| 5   | **Garage Sales**   | Creating and managing garage sale listings or events                           |
+| 6   | **My Store**       | A member’s space for managing their own listings                               |
+| 7   | **Search**         | Searching, filtering, and finding listings by category or location             |
+| 8   | **Messaging**      | Conversations between members                                                  |
+| 9   | **Transactions**   | Tracking the progress and status of a deal between members                     |
+| 10  | **Payments**       | Handling payment-related steps; the payment provider still needs to be decided |
+| 11  | **Support**        | Help requests and member support                                               |
+| 12  | **Administration** | Admin tools for managing the platform and its content                          |
 
 ```mermaid
 flowchart LR
