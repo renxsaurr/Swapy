@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@media (min-width: 64rem) and (min-height: 50rem) {
+  .accounts-login-sign-in-panel {
+    overflow-y: hidden;
+  }
+}

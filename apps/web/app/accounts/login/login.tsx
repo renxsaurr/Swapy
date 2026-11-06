@@ -5,7 +5,7 @@ export default function Login() {
   const [mode, setMode] = useState<'sign-in' | 'sign-up'>('sign-in');
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <main className="grid h-dvh grid-cols-1 grid-rows-[auto_minmax(0,1fr)] overflow-hidden lg:grid-cols-2 lg:grid-rows-1">
+    <main className="fixed inset-0 grid grid-cols-1 grid-rows-[auto_minmax(0,1fr)] overflow-hidden lg:grid-cols-2 lg:grid-rows-1">
       <aside aria-label="SWAPY marketplace artwork" className="relative h-36 overflow-hidden bg-[#FF5A00] sm:h-44 md:h-52 lg:h-full">
         <svg
           aria-hidden="true"
@@ -100,10 +100,10 @@ export default function Login() {
         </svg>
       </aside>
 
-{/* LOGIN FORM*/}
-      <section className="min-h-0 overflow-y-auto overscroll-contain bg-white px-5 py-7 sm:px-8 sm:py-9 lg:flex lg:justify-center lg:px-8 lg:py-8">
-        <div className="mx-auto flex w-full max-w-lg flex-col items-center pb-6 lg:my-auto">
-        <h1 className="w-full mt-4 px-2 pt-1 text-center text-2xl font-bold sm:px-6 sm:pt-0 sm:text-3xl">
+{/* LOGIN FORM*/}  
+      <section className={`min-h-0 overflow-y-auto overscroll-contain bg-white px-5 py-7 sm:px-8 sm:py-9 lg:flex lg:justify-center lg:px-8 lg:py-4 ${mode === 'sign-in' ? 'accounts-login-sign-in-panel' : ''}`}>
+        <div className="mx-auto flex w-full max-w-lg flex-col items-center pb-6 lg:my-auto lg:pb-3">
+        <h1 className="mt-4 w-full px-2 pt-1 text-center text-2xl font-bold sm:px-6 sm:pt-0 sm:text-3xl lg:mt-0">
           {mode === 'sign-in' ? 'Sign in to your account' : 'Create your account'}
         </h1>
         <p className="flex w-full justify-center px-2 pt-3 text-center text-sm text-gray-400 sm:px-6 sm:text-base">
@@ -112,7 +112,7 @@ export default function Login() {
             : 'Join your community and start swapping with Swapy'}
         </p>
 
-        <form onSubmit={(event) => event.preventDefault()} className="flex w-full flex-col justify-center px-1 pt-6 sm:px-6 md:px-10 lg:px-8 xl:px-14">
+        <form onSubmit={(event) => event.preventDefault()} className="flex w-full flex-col justify-center px-1 pt-6 sm:px-6 md:px-10 lg:px-8 lg:pt-4 xl:px-14">
 
           {mode === 'sign-up' && (
             <div className="mb-6">
@@ -128,12 +128,12 @@ export default function Login() {
             </div>
           )}
 
-          <div className="mb-6">
+          <div className="mb-6 lg:mb-4">
             <label htmlFor="email" className="block text-black font-bold mb-2">Email</label>
             <input type="email" id="email" name="email" autoComplete="email" required className="w-full rounded border border-gray-300 py-2 pl-3 pr-11 text-black focus:outline-none focus:ring-2 focus:ring-[#00B8A9]" />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-4 lg:mb-3">
             <label htmlFor="password" className="mb-2 block font-bold text-black"> Password </label>
               <div className="relative">
                 <input type={showPassword ? 'text' : 'password'} id="password" name="password" autoComplete={mode === 'sign-in' ? 'current-password' : 'new-password'} required className="w-full rounded border border-gray-300 py-2 pl-3 pr-11 text-black focus:outline-none focus:ring-2 focus:ring-[#00B8A9]"/>
@@ -162,7 +162,7 @@ export default function Login() {
               />
             </div>
           ) : (
-            <div className="mb-6 flex items-center justify-between gap-2 text-xs">
+            <div className="mb-6 flex items-center justify-between gap-2 text-xs lg:mb-4">
               <label htmlFor="remember-me" className="flex items-center gap-2">
                 <input type="checkbox" id="remember-me" name="remember-me" className="size-4 accent-[#FF5A00] cursor-pointer"/>
                 <span className="text-gray-500 text-sm font-medium cursor-pointer">Remember Me</span>
@@ -172,7 +172,7 @@ export default function Login() {
             </div>
           )}
 
-          <div className=" mb-4 flex justify-center mt-2">
+          <div className="mb-4 mt-2 flex justify-center lg:mb-2 lg:mt-1">
             <button type="submit" className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline w-full cursor-pointer">
               {mode === 'sign-in' ? 'Sign In' : 'Create Account'}
             </button>
@@ -180,13 +180,13 @@ export default function Login() {
 
         </form>
 
-        <div className="mx-auto my-4 flex w-full max-w-sm items-center gap-3 text-xs text-gray-400">
+        <div className="mx-auto my-4 flex w-full max-w-sm items-center gap-3 text-xs text-gray-400 lg:my-3">
           <span className="h-px flex-1 bg-gray-300" />
           <span className="text-center text-sm font-medium text-gray-500">Or {mode === 'sign-in' ? 'login' : 'sign up'} with</span>
           <span className="h-px flex-1 bg-gray-300" />
         </div>
 
-        <div className="mx-auto mt-3 grid w-full max-w-sm grid-cols-2 gap-2 sm:gap-3">
+        <div className="mx-auto mt-3 grid w-full max-w-sm grid-cols-2 gap-2 sm:gap-3 lg:mt-2">
           <button type="button" className="flex items-center justify-center gap-2 rounded border border-gray-300 bg-white py-2.5 text-sm text-gray-800 hover:bg-gray-100 cursor-pointer">
               <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.05 5.05 0 0 1-2.2 3.31v2.77h3.57c2.09-1.92 3.27-4.74 3.27-8.09Z" />
@@ -205,7 +205,7 @@ export default function Login() {
           </button>
         </div>
 
-        <p className="mt-8 px-2 text-center text-gray-500 text-sm font-medium">
+        <p className="mt-8 px-2 text-center text-gray-500 text-sm font-medium lg:mt-4">
           {mode === 'sign-in' ? 'Don’t have an account?' : 'Already have an account?'}{' '}
           <button
             type="button"
