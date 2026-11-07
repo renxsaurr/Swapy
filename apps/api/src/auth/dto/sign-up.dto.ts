@@ -1,3 +1,4 @@
+// VALIDATE SIGN-UP DATA
 import {Transform} from 'class-transformer';
 import {
     IsEmail,
@@ -32,4 +33,5 @@ password!: string;
 @MinLength(15)
 @MaxLength(128)
 confirmPassword!: string;
-}
+} 
+// VALIDATE SIGN-UP DATA END 

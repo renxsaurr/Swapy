@@ -221,6 +221,7 @@ export default function Login() {
 
         </div>
       </section>
+{/* LOGIN FORM END*/}
     </main>
   );
 }

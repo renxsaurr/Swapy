@@ -5,6 +5,7 @@ import { AppService } from './app.service.js';
 import { DatabaseModule } from './db/db.module.js';
 import { HealthController } from './health/health.controller.js';
 import { UsersModule } from './users/users.module.js';
+import { AuthModule } from './auth/auth.module.js';
 
 function validateEnv(config: Record<string, unknown>) {
   if (
@@ -29,7 +30,10 @@ function validateEnv(config: Record<string, unknown>) {
     ConfigModule.forRoot({ isGlobal: true, validate: validateEnv }),
     DatabaseModule,
     UsersModule,
+    AuthModule,
   ],
+
+  
   controllers: [AppController, HealthController],
   providers: [AppService],
 })
