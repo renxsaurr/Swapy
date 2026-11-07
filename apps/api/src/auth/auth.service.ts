@@ -1,25 +1,28 @@
 import {
-    BadRequestException,
-    ConflictException,
-    Inject,
-    Injectable, 
+  BadRequestException,
+  ConflictException,
+  Inject,
+  Injectable,
 } from '@nestjs/common';
 import * as argon2 from 'argon2';
 import type { NodePgDatabase } from 'drizzle-orm/node-postgres';
 import { DB } from '../db/db.module.js';
 import type * as schema from '../db/schema.js';
 import { userCredentials, users } from '../db/schema.js';
-import type {SignUpDto} from './dto/sign-up.dto.js';
+import type { SignUpDto } from './dto/sign-up.dto.js';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    @Inject(DB) private readonly db: NodePgDatabase<typeof schema>,
-  ) {}
+  constructor(@Inject(DB) private readonly db: NodePgDatabase<typeof schema>) {}
 
   async signUp(dto: SignUpDto) {
     if (dto.password !== dto.confirmPassword) {
-      throw new BadRequestException('Passwords do not match.');
+      throw new BadRequestException({
+        message: 'Please fix the highlighted field.',
+        fieldErrors: {
+          confirmPassword: 'Confirm password must match the password.',
+        },
+      });
     }
 
     const passwordHash = await argon2.hash(dto.password);
